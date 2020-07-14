@@ -6,7 +6,7 @@
 
  - name: i want to extract tar file
    unarchive:
-    src: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
+    src: tar xzvf apache-tomcat-8*tar.gz -C /home/ubuntu --strip-components=1
     dest: /opt/tomcat/
     #extra_opts: [--strip-components=1]
     remote_src: yes
