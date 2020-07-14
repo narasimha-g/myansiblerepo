@@ -9,5 +9,5 @@
     name: tomcat
     shell: /bin/flase
     home: /opt/tomcat
-    groups: tomcat
+    group: tomcat
     
