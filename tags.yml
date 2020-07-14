@@ -17,7 +17,7 @@
       state: started
     when: ansible_os_family== "Debian"
     tags:
-    - install redhat 
+    - webserver service 
 
   - name: i want to install webserver on Redhat
     yum:
@@ -25,7 +25,7 @@
       state: present
     when: ansible_os_family== "RedHat"
     tags:
-    - start service  webserver
+    - install webserver
 
   - name: i want to start webserver on Redhat
     service:
@@ -33,4 +33,4 @@
       state: started
     when: ansible_os_family== "RedHat"
     tags:
-    - start service redhat 
+    -  redhat service 
