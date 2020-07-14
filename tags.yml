@@ -7,6 +7,8 @@
       name: "{{webserverpackonubuntu}}"
       state: present
     when: ansible_os_family== "Debian"
+    tags:
+    - install webserver
     
 
   - name: i want to start webserver on ubuntu
@@ -14,15 +16,21 @@
       name: "{{webserverpackonubuntu}}"
       state: started
     when: ansible_os_family== "Debian"
+    tags:
+    - install redhat 
 
   - name: i want to install webserver on Redhat
     yum:
       name: "{{webserveronredhat}}"
       state: present
     when: ansible_os_family== "RedHat"
+    tags:
+    - start service  webserver
 
   - name: i want to start webserver on Redhat
     service:
       name: "{{webserveronredhat}}"
       state: started
     when: ansible_os_family== "RedHat"
+    tags:
+    - start service redhat 
