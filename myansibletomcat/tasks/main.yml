@@ -7,5 +7,9 @@
   - include: tompermissions.yml
   - include: tomconfig.yml
   - include: tomstart.yml
+  - include: tomuser.yml
+  - include: tommanager.yml
+  - include: tomhostanager.yml
+  - include: tomrestart.yml
 
 

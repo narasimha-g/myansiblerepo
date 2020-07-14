@@ -1,0 +1,6 @@
+--- 
+ - name: create tomcat template 
+   template:
+    src: mytemplates/mytomcatmanager.j2
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+    

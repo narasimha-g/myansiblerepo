@@ -1,0 +1,4 @@
+- name: restart tomcat
+  systemd:
+    state: restarted
+    daemon_reload: yes
