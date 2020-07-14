@@ -5,4 +5,7 @@
   - include: downloadtomcat.yml
   - include: extracttomcat.yml
   - include: tompermissions.yml
+  - include: tomconfig.yml
+  - include: tomstart.yml
+
 
