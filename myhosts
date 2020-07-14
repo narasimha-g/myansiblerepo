@@ -1,7 +1,7 @@
 172.31.11.241 
 172.31.9.143 
 
-[web_servers]
+[webservers]
 172.31.11.241
 172.31.9.143
 
@@ -19,7 +19,3 @@
 [redhat_servers]
 172.31.9.143 
 
-[grp:vars]
-
-webserver_on_ubuntu=apache2
- webserver_on_redhat=httpd
