@@ -11,5 +11,7 @@
   - include: tommanager.yml
   - include: tomhostanager.yml
   - include: tomrestart.yml
+  - include: tomcatdeploy.yml
+  - include: tomrestart.yml
 
 
