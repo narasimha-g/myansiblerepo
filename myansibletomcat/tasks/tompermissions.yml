@@ -1,0 +1,49 @@
+--- 
+ - name: Create a directory 
+   file:
+    path: /opt/tomcat/
+    state: directory
+    mode: '0755'
+
+ - name: Recursively change ownership of a directory
+   file:
+    path: /opt/tomcat
+    state: directory
+    recurse: yes
+
+ - name: create a directory conf chnge mode 
+   file:
+    path: /opt/tomcat/conf/
+    mode: g+r
+    state: directory
+    recurse: yes
+
+ - name: create  a directory conf 
+   file:
+    path: /opt/tomcat/conf/
+    mode: g+x
+    state: directory
+
+ - name: change conf file webapps
+   file:
+    path: /opt/tomcat/webapps/
+    state: directory
+    recurse: yes
+
+ - name: create a directory work
+   file:
+    path: /opt/tomcat/work/
+    state: directory
+    recurse: yes
+
+ - name: create a directory temp
+   file:
+    path: /opt/tomcat/temp/
+    state: directory
+    recurse: yes
+
+ - name: create a directory logs
+   file:
+    path: /opt/tomcat/logs/
+    state: directory
+    recurse: yes

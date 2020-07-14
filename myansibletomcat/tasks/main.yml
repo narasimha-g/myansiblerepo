@@ -4,4 +4,5 @@
   - include: tomcatusergroup.yml
   - include: downloadtomcat.yml
   - include: extracttomcat.yml
-  
+  - include: tompermissions.yml
+
