@@ -25,7 +25,7 @@
       state: present
     when: ansible_os_family== "RedHat"
     tags:
-    - install webserver
+    - install redhat 
 
   - name: i want to start webserver on Redhat
     service:
