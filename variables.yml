@@ -3,30 +3,32 @@
    become: yes
    gather_facts: yes
    tasks:
-    - name: i want to ping my all nodes
-      ping:
+   - name: i want to ping my all nodes
+     ping:
 
-    - name: i want to install webserver on ubuntu16.4
-      apt:
-       name: "{{webserver_on_ubuntu}}"
+   - name: i want to install webserver on ubuntu16.4
+     apt:
+       name: apache2
+       #name: "{{webserver_on_ubuntu}}"
+
        state: latest 
-      when: ansible_os_family=="Debian"
+     when: ansible_os_family=="Debian"
 
-    - name: i want to install webserver on ubuntu16.4
-      yum:
+   - name: i want to install webserver on ubuntu16.4
+     yum:
        name: "{{webserver_on_redhat}}"
        state: latest 
-      when: ansible_os_family=="RedHat"
+     when: ansible_os_family=="RedHat"
 
-    - name: i want to install webserver on ubuntu16.4
-      service:
+   - name: i want to install webserver on ubuntu16.4
+     service:
        name: "{{webserver_on_redhat}}"
        state: started  
-      when: ansible_os_family=="RedHat"
+     when: ansible_os_family=="RedHat"
 
 
-    - name: i want to install webserver on ubuntu16.4
-      service:
+   - name: i want to install webserver on ubuntu16.4
+     service:
        name: "{{webserver_on_ubuntu}}"
        state: started  
-      when: ansible_os_family=="Debian"
+     when: ansible_os_family=="Debian"
