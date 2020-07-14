@@ -7,7 +7,7 @@
  - name: create tomcat user 
    user:
     name: tomcat
-    shell: /bin/flash
+    shell: /bin/flase
     home: /opt/tomcat
-    group: tomcat
-    append: yes
+    groups: tomcat
+    
