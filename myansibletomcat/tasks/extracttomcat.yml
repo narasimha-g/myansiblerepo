@@ -11,3 +11,4 @@
     extra_opts:
     - --transform
     - s/^xxx/yyy/
+    remote_src: yes
