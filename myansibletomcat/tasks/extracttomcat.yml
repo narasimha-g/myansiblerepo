@@ -7,8 +7,5 @@
  - name: Extract tomcat
    unarchive:
     src: tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
-    dest: /opt/tomcat
-    extra_opts:
-    - --transform
-    - s/^xxx/yyy/
+    dest: /opt/tomcat/
     remote_src: yes
