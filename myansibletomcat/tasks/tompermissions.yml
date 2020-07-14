@@ -1,51 +1,45 @@
-
-
- - name: Recursively change ownership of a directory
-   file:
+---
+- name: change group ownership
+  file:
     path: /opt/tomcat
     state: directory
     recurse: yes
     group: tomcat
 
- - name: create a directory conf 
-   file:
-    path: /opt/tomcat/conf/
+
+- name: change mode on config
+  file:
+    path:  /opt/tomcat/conf
+    state: directory
     mode: g+r
-    state: directory
     recurse: yes
     group: tomcat
 
- - name: create  a directory conf 
-   file:
-    path: /opt/tomcat/conf/
+- name: change mode on config
+  file:
+    path:  /opt/tomcat/conf
+    state: directory
     mode: g+x
-    state: directory
     group: tomcat
-
- - name: change conf file webapps
-   file:
-    path: /opt/tomcat/webapps/
-    state: directory
-    recurse: yes
-    group: tomcat
-
- - name: create a directory work
-   file:
-    path: /opt/tomcat/work/
+    
+- name:  change owner on  webapps
+  file:
+    path : /opt/tomcat/webapps/
     state: directory
     recurse: yes
-    group: tomcat
+    owner: tomcat
+    
 
- - name: create a directory temp
-   file:
-    path: /opt/tomcat/temp/
+- name:  change owner on  work
+  file:
+    path : /opt/tomcat/work/
     state: directory
     recurse: yes
-    group: tomcat
-
- - name: create a directory logs
-   file:
-    path: /opt/tomcat/logs/
+    owner: tomcat
+    
+- name:  change owner on  temp
+  file:
+    path : /opt/tomcat/temp/
     state: directory
     recurse: yes
-    group: tomcat
+    owner: tomcat
