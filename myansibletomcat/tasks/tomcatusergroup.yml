@@ -9,5 +9,5 @@
     name: tomcat
     shell: /bin/flash
     home: /opt/tomcat
-    groups: tomcat
+    group: tomcat
     append: yes
