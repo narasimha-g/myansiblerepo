@@ -2,7 +2,6 @@
  - name: tomcat deamon reload 
    systemd:
     name: tomcat
-    state: restarted
     daemon_reload: yes
 
  - name: Make sure a service is running
