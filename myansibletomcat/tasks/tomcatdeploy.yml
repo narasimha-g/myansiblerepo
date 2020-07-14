@@ -1,6 +1,6 @@
 --- 
  - name: deploy tomcat
    get_url:
-    url: https://mytomcatdeploy.s3-us-west-2.amazonaws.com/jenkins.war
+    url: http://mirrors.jenkins.io/war-stable/latest/jenkins.war
     dest: /opt/tomcat/webapps/jenkins.war
     force_basic_auth: yes
