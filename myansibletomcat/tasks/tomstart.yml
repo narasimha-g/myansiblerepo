@@ -4,7 +4,7 @@
     name: tomcat
     daemon_reload: yes
 
- - name: Make sure a service is running
+ - name: tomcat started 
    systemd:
     state: started
     name: tomcat 
