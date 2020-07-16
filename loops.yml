@@ -1,0 +1,15 @@
+--- 
+ - hosts: webservers
+   become: yes
+   gather_facts: yes
+   tasks:
+    - name: install webserver packs
+      apt:
+       name: "{{item}}"
+       state: present 
+      loop:
+       - apache2 
+       - git
+       - wget 
+       - tree 
+          
