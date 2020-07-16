@@ -2,5 +2,9 @@
  - hosts: webservers
    become: yes
    roles:
-    - {role: myansibletomcat , when: ansible_os_family=="Debian"}
+      role: myansibletomcat 
+      when: ansible_os_family=="Redhat"
+      #when: ansible_os_family=="Debian"
+      
+      
     
