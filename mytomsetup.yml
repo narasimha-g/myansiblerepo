@@ -3,8 +3,8 @@
    become: yes
    roles:
       role: myansibletomcat 
-      when: ansible_os_family=="Redhat"
-      #when: ansible_os_family=="Debian"
+      #when: ansible_os_family=="Redhat"
+      when: ansible_os_family=="Debian"
       
       
     
